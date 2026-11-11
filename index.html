@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parley — Privacy Policy</title>
+    <style>
+      :root { color-scheme: light dark; --fg: #171a21; --muted: #5c6373; --line: #e4e7ee; --bg: #fff; --accent: #4f46e5; }
+      @media (prefers-color-scheme: dark) {
+        :root { --fg: #eef0f5; --muted: #a0a8b8; --line: #2f343f; --bg: #15171d; --accent: #8b85f8; }
+      }
+      body {
+        max-width: 42rem; margin: 0 auto; padding: 48px 20px 80px;
+        font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: var(--bg); color: var(--fg);
+      }
+      h1 { font-size: 1.7rem; margin: 0 0 4px; letter-spacing: -0.02em; }
+      h2 { font-size: 1.05rem; margin: 2.2rem 0 0.6rem; }
+      .sub { color: var(--muted); margin: 0 0 2rem; }
+      .lede { font-size: 1.08rem; padding: 16px 18px; border-radius: 10px; border: 1px solid var(--line); background: color-mix(in srgb, var(--accent) 7%, transparent); }
+      table { border-collapse: collapse; width: 100%; margin-top: 0.5rem; font-size: 0.94rem; }
+      th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+      th { color: var(--muted); font-weight: 600; }
+      code { font-size: 0.88em; padding: 1px 5px; border-radius: 4px; background: color-mix(in srgb, var(--fg) 8%, transparent); }
+      a { color: var(--accent); }
+      footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Parley — Privacy Policy</h1>
+    <p class="sub">Last updated 11 November 2026</p>
+
+    <p class="lede">
+      Parley does not collect, transmit, store or sell any personal information. It makes no network
+      requests of its own, contains no analytics, no trackers and no remote code, and has no backend
+      server to send anything to.
+    </p>
+
+    <h2>How translation works</h2>
+    <p>
+      Parley uses the <strong>Translator API built into Google Chrome</strong>. Translation runs on
+      your own computer, against a language model that Chrome downloads and manages itself. The text
+      of the pages you translate is passed to that local API and never leaves your device. Parley has
+      no servers, no account system and no API keys.
+    </p>
+    <p>
+      The one-off download of a language model is performed by Chrome, not by Parley, and is governed
+      by <a href="https://policies.google.com/privacy" rel="noreferrer">Google's privacy policy</a>.
+    </p>
+
+    <h2>What is stored, and where</h2>
+    <p>Parley keeps a small amount of configuration using Chrome's extension storage:</p>
+    <table>
+      <tr><th>Item</th><th>Purpose</th></tr>
+      <tr><td>Preferred language</td><td>So the right target is selected next time.</td></tr>
+      <tr><td>Last three languages used</td><td>Shown at the top of the language list.</td></tr>
+      <tr><td>Two on/off settings</td><td>Whether to translate attributes, and content that loads in later.</td></tr>
+    </table>
+    <p>
+      That is the complete list. It contains no page content, no browsing history and nothing that
+      identifies you. It is written with <code>chrome.storage.sync</code>, so if you have Chrome Sync
+      switched on, Chrome itself may sync those few values across your own signed-in devices. That
+      transfer is between you and Google; the author of Parley cannot see it.
+    </p>
+    <p>
+      The original text of a translated page is held in memory only, so the <em>Original</em> button
+      can put it back. It is discarded as soon as you restore the page, close the tab or reload it.
+    </p>
+
+    <h2>Permissions</h2>
+    <table>
+      <tr><th>Permission</th><th>Why it is needed</th></tr>
+      <tr><td><code>activeTab</code></td><td>Read and rewrite the text of the tab you are on, and only when you click Parley.</td></tr>
+      <tr><td><code>scripting</code></td><td>Insert the script that walks the page's text and writes translations back.</td></tr>
+      <tr><td><code>storage</code></td><td>Remember the handful of settings listed above.</td></tr>
+      <tr><td><code>contextMenus</code></td><td>Add the "Translate this page" right-click entry.</td></tr>
+      <tr><td><code>&lt;all_urls&gt;</code> (optional)</td><td>Only requested if you switch on <em>Embedded frames</em>, because a frame from another site is outside the access <code>activeTab</code> grants. Switching it off removes the permission.</td></tr>
+    </table>
+    <p>
+      Parley has no access to any page until you click it, and no background access to your browsing
+      at all.
+    </p>
+
+    <h2>Children</h2>
+    <p>Parley collects no data from anyone, including children under 13.</p>
+
+    <h2>Changes</h2>
+    <p>
+      If this policy ever changes, the new version will be published at this address with an updated
+      date, and the change will be noted in the extension's store listing.
+    </p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy: <a href="mailto:kashifahmeddev@gmail.com">kashifahmeddev@gmail.com</a></p>
+
+    <footer>Parley is published by Kashif Ahmed. It is not affiliated with Google.</footer>
+  </body>
+</html>
